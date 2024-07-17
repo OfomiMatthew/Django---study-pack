@@ -1,0 +1,21 @@
+{% extends 'dashboardApp/base.html' %}
+
+
+{% block title %}
+    Delete
+{% endblock title %}
+
+
+{% block content %}
+<div class="pt-sm-5 mt-sm-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to delete your comment: "{{obj}}"?</p>
+        {% comment %} back to previous page {% endcomment %}
+        <a href="{{request.META.HTTP_REFERER}}">Go back</a>
+        <input type="submit" value="Confirm">
+    </form>
+</div>
+{% endblock content %}
+    
+    
