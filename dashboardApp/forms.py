@@ -15,3 +15,8 @@ class HomeworkForm(forms.ModelForm):
         model = Homework
         widgets = {'due_date':DateInput()}
         fields = ['subject','title','description','due_date','is_finished']
+
+class DashboardForm(forms.Form):
+    text = forms.CharField(max_length=200,label='Search for content: ')
+
+

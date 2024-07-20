@@ -10,5 +10,15 @@ urlpatterns = [
     path('update-note/<int:pk>/',views.update_note,name='update-note'),
 
     # homework paths
-    path('homework',views.homework,name='homework')
+    path('homework',views.homework,name='homework'),
+    path('update-homework/<int:pk>/',views.update_homework,name='update-homework'),
+    path('delete-homework/<int:pk>/',views.delete_homework, name='delete-homework'),
+
+    # youtube tutorial content
+    path('youtube',views.youtube_content,name='youtube'),
+
+    # books content 
+    path('books',views.books,name='books')
+
+   
 ]
